@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>BepInExInstaller</AssemblyName>
+    <RootNamespace>BepInExInstaller</RootNamespace>
+    <!-- Uncomment and add app.ico to the project folder if you want a custom icon -->
+    <!-- <ApplicationIcon>app.ico</ApplicationIcon> -->
+    <Version>1.0.0</Version>
+
+    <!-- Makes `dotnet publish` produce a single self-contained exe -->
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Used to read/write nested zip entries and JSON from the GitHub API -->
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+  </ItemGroup>
+
+
+</Project>
